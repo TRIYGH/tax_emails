@@ -30,12 +30,13 @@ for file in files:
                 counter += 1
                 # print(letter_place, counter, keep_going, email_addresses)
                 if counter > 4:
-                    if this_email[-4:] == '.com':
+                    finished = this_email[-4:]
+                    if finished == '.com' or finished == '.net' or finished == '.gov' or finished == '.edu':
                         keep_going = False
                         print("****************", email_addresses, each, "*****************")
                         email_addresses.append(this_email)
                 if counter > 150:
                     keep_going = False
-print(email_addresses)
+print(email_addresses, len(email_addresses))
 
 #Email\x08\x00.\x00\x00\x00j\x00k\x00i\x00l\x00p\x00a\x00t\x00r\x00i\x00c\x00k\x00m\x00d\x00@\x00n\x00c\x00.\x00r\x00r\x00.\x00c\x00o\x00m
